@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+#crx-root button {
+  background-color: rgb(239, 239, 239);
+  border-color: rgb(118, 118, 118);
+  border-image: initial;
+  border-style: outset;
+  border-width: 2px;
+  margin: 0;
+  padding: 1px 6px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
