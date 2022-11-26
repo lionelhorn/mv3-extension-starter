@@ -24,6 +24,10 @@ export const manifest = defineManifest(async (env) => ({
     js: ["./src/content.tsx"],
     matches: ["<all_urls>"],
   }],
+  background: {
+    service_worker: "src/background/index.ts",
+    type: "module",
+  },
   action: {
     "default_popup": "index.html",
   },
