@@ -21,14 +21,17 @@ export const manifest = defineManifest(async (env) => ({
   // semver is OK in "version_name"
   version_name: version,
   content_scripts: [{
-    js: ["./src/content.tsx"],
-    matches: ["<all_urls>"],
+    js: ["src/pages/content.tsx"],
+    matches: ["https://*.lionelhorn.com/*"],
   }],
   background: {
-    service_worker: "src/background/index.ts",
+    service_worker: "src/background.ts",
     type: "module",
   },
   action: {
-    "default_popup": "index.html",
+    "default_popup": "popup.html",
   },
+  permissions: [
+    "storage",
+  ],
 }));
