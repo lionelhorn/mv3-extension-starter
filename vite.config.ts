@@ -9,5 +9,6 @@ export default defineConfig({
   plugins: [crx({manifest}), react()],
   server: {
     host: "0.0.0.0", // <==
+    port: 5180
   },
 });
