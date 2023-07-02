@@ -12,6 +12,9 @@ const [major, minor, patch, label = "0"] = version
 
 export const manifest = defineManifest(async (env) => ({
   manifest_version: 3,
+  icons: {
+    "128": "icons/logo-128.png"
+  },
   name:
     env.mode === "staging"
       ? `[INTERNAL] ${packageName}`
